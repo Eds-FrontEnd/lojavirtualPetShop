@@ -1,0 +1,428 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+}
+header,
+nav {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+.top {
+  background-color: var(--orange-light);
+}
+.max-width {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1;
+  position: relative;
+}
+.top-info {
+  width: 100%;
+  min-height: 38px;
+  margin: 0 auto;
+  color: var(--white);
+  line-height: 38px;
+  font-size: 13px;
+  font-family: var(--font-montSerrat);
+  padding: 0px 10px;
+}
+.linha-pontilhada {
+  height: 15px;
+  border-left: 1px dotted var(--white);
+  margin: 10px 20px;
+  text-align: center;
+}
+.linha-horizontal {
+  width: 138px;
+  border-bottom: 2px dotted var(--black);
+  margin: 10px;
+  text-align: center;
+  z-index: 2;
+}
+.frete,
+.troca,
+.desconto,
+.pague {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+/* Contador */
+
+.circle__car {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: var(--white);
+  float: right;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 15px;
+  margin-left: -14px;
+  position: absolute;
+  position: absolute;
+}
+
+.circle__wish {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: var(--white);
+  float: right;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 9px;
+  line-height: 15px;
+  margin-left: -14px;
+  position: absolute;
+}
+
+/* Navegação da Loja Virtual */
+.navbar {
+  min-height: 131px;
+  background-color: var(--white);
+}
+.navbar .max-width{
+  justify-content: space-evenly !important;
+}
+.logo img {
+  max-height: 80px;
+  line-height: 131px;
+  margin-top: 25px;
+  padding: 0px 30px;
+}
+.logo-mobile {
+  display: none;
+}
+.menu {
+  line-height: 131px;
+  margin-left: 144px;
+  margin-right: 20px;
+}
+.menu ul li {
+  display: inline;
+  height: auto;
+  margin: 0 auto;
+  list-style: none;
+  font-size: 13px;
+  padding: 15px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: var(--black);
+}
+#menu-bar {
+  display: none;
+}
+.darkw {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-modal);
+  display: none;
+  z-index: 0;
+}
+.modal {
+  margin-top: -210px;
+  z-index: 25;
+}
+
+/* Modal Produto */
+#modal-produto{
+  display: flex;
+}
+/* Botão Promoção no Topo */
+.promocao {
+  line-height: 131px;
+}
+.promocao button {
+  padding: 7px 10px;
+  margin: 0px 5px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+  transition: all 0.5s;
+}
+.promocao button:hover {
+  background-color: var(--orange-dark);
+}
+
+/* Ícones do Menu */
+.icons {
+  width: 120px;
+  display: flex;
+  height: auto;
+  margin: 0 auto;
+  margin-left: 95px;
+  float: right;
+  margin-top: 55px;
+}
+.icons img {
+  height: 21px;
+  padding: 0px 8px;
+  cursor: pointer;
+}
+
+/* Banner Principal */
+
+.full-banner {
+  background-color: var(--orange-light);
+}
+.full-banner img {
+  width: 100%;
+}
+.nossos-queridinhos {
+  padding-bottom: 30px !important;
+}
+
+/* Banner Secundário */
+.banner-title {
+  min-height: 130px;
+  background-color: var(--white);
+  padding-top: 64px;
+  padding-bottom: 55px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+.title-banner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.title-banner h1 {
+  font-size: 2em;
+}
+.title-banner h4 {
+  padding-top: 20px;
+  color: var(--gray-dark);
+}
+.title-banner .max-width {
+  justify-content: center;
+}
+
+/* Fotos Produtos */
+.products {
+  justify-content: center;
+  padding: 14px 0px;
+}
+.photo-pug img {
+  max-width: 425px;
+  margin: 10px 30px 30px 10px;
+}
+.photo-pug-2 .pug-2 {
+  max-width: 425px !important;
+  margin: 10px 10px 30px 30px;
+}
+.products-2{
+  flex-direction: row-reverse;
+}
+.coleiras {
+  height: 565px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+.coleiras img {
+  max-width: 200px;
+  margin: 10px;
+  display: flex;
+}
+.coleiras:hover .button {
+  display: block;
+}
+
+.coleiras:hover .coleiras-icon__heart{
+  display: block;
+}
+.coleiras:hover .coleiras-icon__car{
+  display: block;
+ }
+
+.coleiras-icon__heart {
+  background-color: var(--white);
+  right: 20px;
+  top: 250px;
+  position: absolute;
+  border-radius: 50%;
+  display: none;
+  transition: all 0.5s;
+}
+.coleiras-icon__heart img{
+  width: 16px;
+}
+.coleiras-icon__heart:hover {
+  background-color: var(--orange-dark);
+}
+
+.coleiras-icon__car {
+  background-color: var(--white);
+  right: 20px;
+  position: absolute;
+  border-radius: 50%;
+  top: 295px;
+  display: none;
+  transition: all 0.5s;
+}
+.coleiras-icon__car img{
+  width: 16px;
+}
+.coleiras-icon__car:hover {
+  background-color: var(--orange-dark);
+}
+.description {
+  width: 175px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  color: var(--gray-dark);
+}
+.description .title-product {
+  font-size: 12px;
+}
+.description .stars {
+  margin: 0 auto;
+}
+.description .price {
+  color: var(--black);
+  font-size: 16px;
+}
+.description .price-back {
+  color: var(--gray-dark);
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.description .button {
+  width: 135px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: var(--orange-dark);
+  color: var(--white);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  margin: 13px auto;
+  display: none;
+}
+.description .button:hover {
+  background-color: var(--orange);
+}
+
+/* Fotos - Produtos Seção - 3 */
+.products-3 img {
+  margin: 5px !important;
+}
+
+/* Fotos - Produtos Seção - 4 */
+.products-4 img {
+  margin: 5px !important;
+}
+.lista-produtos .slide-show {
+  margin: 10px 5px !important;
+}
+
+/* Banner Footer */
+#footer-banner {
+  justify-content: center;
+}
+.footer-banner__photo img {
+  max-width: 415px;
+  margin: 0 auto;
+  padding: 10px 5px;
+  justify-content: center;
+  text-align: center;
+}
+
+.mais-vendidos {
+  min-height: 640px;
+  margin: 0 auto;
+  margin-top: 90px;
+  text-align: center;
+  background-color: var(--gray);
+}
+.mais-vendidos .banner-title {
+  background-color: var(--gray);
+}
+.border {
+  width: 100%;
+  height: 24px;
+}
+
+/* Rodapé da Página */
+.footer-end .max-width {
+  justify-content: center;
+}
+.footer-end__logo img {
+  max-width: 170px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 20px 0px 30px;
+}
+.footer-end__columns {
+  margin: 20px 0px;
+  padding: 0 45px;
+  line-height: 30px;
+}
+.footer-end__jet {
+  display: flex;
+  flex-direction: column;
+}
+.footer-end h1 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.footer-end ul li a {
+  font-size: 14px;
+  color: var(--gray-dark);
+}
+.footer-end ul li a:hover {
+  color: var(--orange-dark);
+}
+.footer-end .logo-jet {
+  max-width: 55px;
+  margin: 7px 0px 15px 0px;
+}
+.footer-end .logo-jet img {
+  text-align: center;
+  justify-content: center;
+}
+.footer-end hr {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 690px;
+}
+.footer-end .brands {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+}
+.footer-end .brands img {
+  max-width: 362px;
+}

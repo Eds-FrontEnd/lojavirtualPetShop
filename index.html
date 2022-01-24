@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Edson" />
+        <link rel="shortcut icon" href="assets/imgs/favicon/favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/variables.css" />
+        <link rel="stylesheet" href="assets/css/responsive.css" />
+        <link rel="stylesheet" href="assets/css/modal.css" />
+        <link rel="stylesheet" href="assets/css/modal-produto.css" />
+        <link rel="stylesheet" href="assets/css/carrinho.css" />
+        <title>AuAu | Petshop</title>
+    </head>
+    <body>
+        <main>
+             <!-- Modal - Newsletter -->
+             <div id="modal" onload="modalNewsletter()">
+                 <div class="modal-newsletter">
+                     <div class="close" onclick="modalClose()"> X</div>
+                     <div class="modal-description">
+                         <p class="modal-title">Que tal um descontão de <strong>10%</strong> na sua compra?</p>
+                            <div class="modal-phrase">
+                                <p>
+                                Cadastre-se e ganhe um </p><p><strong>super desconto</strong> para aproveitar e </p><p>deixar o seu pet felizão </p>
+                            </div>
+                            <div class="modal-input">
+                                <input type="email" name="email" id="cadastrar" placeholder="email@example.com.br" autofocus required>
+                                <div class="modal-input__button">
+                                    <input type="submit" value="CADASTRAR" onclick="cadastrarEmail()">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+             </div>
+             <!--Modal Produto -->
+             <div id="modal-produto" >
+                <div class="modal-produto__int">
+                    <div class="close" onclick="closeModal()">X</div>
+                    <div class="modal-produto__item">
+                        <img class="produto-img" src="assets/imgs/product/product-1.png" alt="coleira com mosquetão">
+                        
+                          <div class="description">
+                              <h1 class="title-product">Morbi condimentum egestas quam - 3m</h1>
+                              <h1 class="color">Cor: Misto</h1>
+                              <h1 class="tamanho">Tamanho: 3m</h1>
+                              <div class="stars"><img src="assets/imgs/product/rate.png" alt="favoritar com estrela"></div>
+                              <div> <strong class="price"> R$ 18,90</strong><strike class="price-back">R$ 35,00</strike> </div>
+                              
+                          </div>
+                    </div>
+                    <button class="modal-produto__button" onclick="adicionarProduto()">Adicionar</button>
+               </div>
+            </div>
+             <!-- Carrinho -->
+             <section>
+                 <div id="sacola">
+                     <div class="mini-carrinho">
+                         <div class="max-width">
+                            <h1 class="mini-carrinho-title__bag">Minha Sacola</h1>
+                            <div class="mini-carrinho-button__close" onclick="closeBag()">X</div>
+                            <hr class="mini-carrinho-title-linha">
+                            <div class="mini-carrinho__pedido">
+
+                                <!-- Reinderiza o Pedido -->
+                                <div class="modal-produto__item">
+                                    <img class="produto-img" src="assets/imgs/product/product-1.png" alt="coleira com mosquetão">
+                                    
+                                      <div class="description">
+                                          <h1 class="title-product">Morbi condimentum egestas quam - 3m</h1>
+                                          <h1 class="color">Cor: Misto</h1>
+                                          <h1 class="tamanho">Tamanho: 3m</h1>
+                                          <div class="stars"><img src="assets/imgs/product/rate.png" alt="favoritar com estrela"></div>
+                                          <div class="preco"> <strong class="price"> R$ 18,90</strong>
+                                            <div class="desco">
+                                                <strike class="price-back">R$ 35,00</strike> </div>
+                                            </div>
+                                      </div>
+                                </div>
+
+                            </div>
+                            <div class="mini-carrinho__finalizar">
+                                <h3 class="mini-carrinho__subtotal">Subtotal: R$ 18,90</h3>
+                                <hr class="mini-carrinho-title-linha">
+                                <h3 class="mini-carrinho__subtitle" onclick="closeBag()">Continuar Comprando</h3>
+                                <button class="mini-carrinho__button">Finalizar Compra</button>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+             </section>
+            <!-- Topo da Loja Virtual -->
+            <header class="top">
+                <div class="top-info">
+                    <div class="max-width">
+                        <div class="frete">
+                            Frete Grátis -
+                            <strong>Acima de R$ 299,00</strong>
+                            - Sul e Sudeste
+                        </div>
+                        <div class="linha-pontilhada"></div>
+                        <div class="troca">
+                            Não serviu?
+                            <strong>A primeira troca </strong>
+                            é grátis
+                        </div>
+                        <div class="linha-pontilhada"></div>
+                        <div class="desconto">
+                            <strong>10% </strong>
+                            de desconto no boleto
+                        </div>
+                        <div class="linha-pontilhada" id="boleto"></div>
+                        <div class="pague">
+                            Pague em até
+                            <strong>10x sem juros</strong>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navegação da Loja Virtual -->
+                <nav class="navbar">
+                    <div class="max-width">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="assets/imgs/header/logo.png" alt="logo AuAu PetShop" title="logo AuAu PetShop" />
+                            </a>
+                        </div>
+                        <!-- Menu -->
+                        <div class="menu">
+                            <ul>
+                                <li>
+                                    <a href="">Rações <img src="assets/imgs/header/arrow.png" alt="mais opção abaixo" /></a>
+                                </li>
+                                <li>
+                                    <a href="">Acessórios <img src="assets/imgs/header/arrow.png" alt="mais opção abaixo" /></a>
+                                </li>
+                                <li>
+                                    <a href="">Kits <img src="assets/imgs/header/arrow.png" alt="mais opção abaixo" /></a>
+                                </li>
+                                <li><a href="">Combos </a></li>
+                            </ul>
+                        </div>
+                        <!-- Botão Promoção do topo -->
+                        <div class="promocao">
+                            <button>Promoções</button>
+                        </div>
+                        <!-- Icones do topo -->
+                        <div class="icons">
+                            <div class="search">
+                                <img src="assets/imgs/header/search.png" alt="pesquisar" title="pesquisar" />
+                            </div>
+                            <span class="like">
+                                <img src="assets/imgs/header/wish.png" alt="like de coração" title="like de coração" />
+                                <span class="circle__wish">
+                                    0
+                                </span>
+                            </span>
+                            <div class="carrinho">
+                                <img src="assets/imgs/header/cart.png" alt="carrinho de compras" title="carrinho de compras" onclick="adicionarProduto()"/>
+                                <span class="circle__car">
+                                    0
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Menu Mobile -->
+                        <div id="menu-bar">
+                            <div id="menu" onclick="onClickMenu()">
+                                <div id="bar1" class="bar"></div>
+                                <div id="bar2" class="bar"></div>
+                                <div id="bar3" class="bar"></div>
+                            </div>
+                            <ul class="nav" id="nav" onclick="closer()">
+                                <li><a href="#">Rações</a></li>
+                                <li><a href="#">Acessórios</a></li>
+                                <li><a href="#">Kits</a></li>
+                                <li><a href="#">Combos</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-bg" id="menu-bg"></div>
+                        <div class="darkw"></div>
+                    </div>
+                </nav>
+            </header>
+            <!-- Banner Principal da Loja Virtual -->
+            <section class="full-banner">
+                <div class="max-width">
+                    <img src="assets/imgs/banner/full-banner-first.png" alt="cachorro pug com roupinha" title="cachorro pug com roupinha" />
+                </div>
+            </section>
+             <!-- Banner Título -->
+             <section class="banner-title nossos-queridinhos">
+                 <div class="title-banner">
+                    <div class="max-width">
+                        <div class="linha-horizontal"></div>
+                        <h1>Os Nossos Queridinhos</h1>
+                        <div class="linha-horizontal"></div>
+                    </div>
+                    <h4>Produtos escolhidos com carinho para você.</h4>
+                 </div>
+             </section>
+            <!-- Fotos Produtos - Seção 01 -->
+            <section>
+                <div class="max-width products">
+                    <div class="photo-pug">
+                        <img src="assets/imgs/banner/side-banner-1.png" alt="cachorro com roupinha de capuz com orelhinha de urso">
+                    </div>
+
+                      <!-- Produtos Reinderizados - Seção 01 -->
+                      
+                </div>
+          </section>
+            <!-- Fotos Produtos - Seção 02 -->
+            <section>
+                <div class="max-width products-2">
+               
+                     <!-- Produtos Reinderizados - Seção 02 -->
+
+                    <div class="photo-pug-2">
+                        <img class="pug-2" src="assets/imgs/banner/side-banner-2.png" alt="cachorro pug com camiseta listra e um macacão jeans.">
+                    </div>
+                </div>
+          </section>
+        </section>
+        <!-- Banner Título -->
+        <section class="banner-title">
+            <div class="title-banner">
+               <div class="max-width">
+                   <div class="linha-horizontal"></div>
+                   <h1>Produtos Exclusivos</h1>
+                   <div class="linha-horizontal"></div>
+               </div>
+            </div>
+        </section>
+         <!-- Fotos Produtos - Seção 03 -->
+        <section class="lista-produtos">
+            <div class="max-width products-3" >
+                
+                 <!-- Produtos Reinderizados - Seção 03 -->
+               
+            </div>
+      </section>
+      <!-- Banner Footer -->
+            <footer>
+                <section>
+                    <div class="max-width" id="footer-banner">
+                        <div class="footer-banner__photo">
+                            <img src="assets/imgs/banner/footer-banner-1.png" alt="cachorro com roupinha de capuz com orelhinha de urso">
+                        </div>
+                        <div class="footer-banner__photo">
+                            <img src="assets/imgs/banner/footer-banner-2.png" alt="cachorro com orelha em pé quando ouve a palavra comida.">
+                        </div>
+                    </div>
+                </section>   
+                <!-- Fotos Produtos - Seção 04 -->
+                <section class="lista-produtos">
+                    <div class="mais-vendidos">
+                        <img src="assets/imgs/product/border-top.png" class="border" alt="#">
+                        <section class="banner-title">
+                        <div class="title-banner">
+                            <div class="max-width">
+                                <div class="linha-horizontal"></div>
+                                <h1>Mais Vendidos</h1>
+                                <div class="linha-horizontal"></div>
+                            </div>
+                         </div>
+                         </section>
+                        <div>
+                            <div class="max-width products-4" >
+                              
+                              <!-- Produtos Reinderizados - Seção 04 -->
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <img src="assets/imgs/product/border-bottom.png" class="border" alt="#">
+                </section>
+                <section>
+                    <div class="footer-end">
+                        <div class="footer-end__logo">
+                            <img src="assets/imgs/header/logo.png" alt="logo Au Au Pet Shop" title="logo Au Au Pet Shop">
+                        </div>
+                        <div class="max-width">
+                                <div class="footer-end__columns">
+                                    <h1>Institucional</h1>
+                                    <ul>
+                                        <li><a href="#">Quem Somos</a></li>
+                                        <li><a href="#">Missão e Visão</a></li>
+                                        <li><a href="#">Valores</a></li>
+                                        <li><a href="#">Política de Privacidade</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-end__columns">
+                                    <h1>Atendimento</h1>
+                                    <ul>
+                                        <li><a href="#">Entregas</a></li>
+                                        <li><a href="#">Trocas e Devoluções</a></li>
+                                        <li><a href="#">Fale Conosco</a></li>
+                                        <li><a href="#">Dúvidas Frequentes</a></li>
+                                    </ul>
+                                </div>
+                                <div class="footer-end__columns">
+                                    <h1>Confie</h1>
+                                    <div class="footer-end__jet">
+                                        <img src="assets/imgs/footer/jet.png" class="logo-jet" alt="logo jet" title="logo jet">
+                                        <img src="assets/imgs/footer/seal.png" alt="compre e confie" title="compre e confie">
+                                    </div>
+                                </div>   
+                            </div>
+                            <hr>
+                            <div class="brands">
+                                <img src="assets/imgs/footer/brands.png" alt="bandeiras de bancos e financeiras" title="bandeiras de bancos e financeiras">
+                            </div>
+                        </div>
+                </section>
+            </footer>
+        </main>
+        <script src="assets/js/menu-mobile.js"></script>
+        <script src="assets/js/modal.js"></script>
+        <script  src="assets/js/carrinho.js"></script>
+        <script  src="assets/js/adicionar-produto.js"></script>
+        <script type="module" src="assets/js/models/produtos.js"></script>
+        <script type="module" src="assets/js/models/produtos-4.js"></script>
+        <script type="module" src="assets/js/sessions/sessaoUm.js"></script> 
+        <script type="module" src="assets/js/sessions/sessaoDois.js"></script> 
+        <script type="module" src="assets/js/sessions/sessaoTres.js"></script> 
+        <script type="module" src="assets/js/sessions/sessaoQuatro.js"></script> 
+    </body>
+</html>

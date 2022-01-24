@@ -1,0 +1,108 @@
+/* Modal - Newsletter */
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-modal);
+  z-index: 10;
+  display: none;
+}
+.modal-newsletter {
+  width: 660px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-image: url("../imgs/newsletter/newsletter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    top: -850px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
+}
+.modal-newsletter .close {
+  font-family: var(--font-quickSand);
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px var(--black);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 1;
+}
+.modal-photo {
+  position: relative;
+}
+.modal-description {
+  max-width: 325px;
+  font-family: var(--font-quickSand);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 29px;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  padding: 8px;
+  top: 40px;
+  right: 10px;
+}
+.modal-description strong {
+  text-shadow: 0.3px 0.3px var(--black);
+}
+.modal-description .modal-title {
+  padding: 36px 10px;
+}
+.modal-description .modal-phrase {
+  font-size: 17px;
+  font-family: var(--font-montSerrat);
+  font-weight: 500;
+}
+.modal-description input {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 15px;
+}
+.modal-description .modal-input {
+  width: 100%;
+  height: 53px;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: var(--white);
+  margin: 25px 0;
+}
+.modal-description .modal-input__button {
+  line-height: 53px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* Topo Info */
+.modal-description .modal-input__button input {
+  background-color: var(--black);
+  color: var(--white);
+  cursor: pointer;
+}

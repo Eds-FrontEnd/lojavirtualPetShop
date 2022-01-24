@@ -1,0 +1,22 @@
+
+/* Font Quicksand - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@400;500;600;700&display=swap');
+
+/* Font  Montserrat - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root{
+    --black: #000;
+    --black-modal: rgba(0, 0, 0, 0.692);
+    --white: #fff;
+    --gray: #F7F3F0;
+    --gray-dark: #777777;
+    --green: #21BA45;
+    --green-dark: #0f6d25;
+    --orange: #fcbd24;
+    --orange-light: #eda569;
+    --orange-dark: #ef6b00;
+    --red: #ff0000;
+    --font-quickSand: 'Quicksand', sans-serif;
+    --font-montSerrat: 'Montserrat', sans-serif;
+}
